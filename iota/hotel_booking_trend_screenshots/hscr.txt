@@ -1,0 +1,19 @@
+Getting hourly Hotel Booking Trend Screeshots:
+---------------------------------------------
+
+To get hourly Hotel screenshots for 6 different Properties, I decided to create a script to do part of the work and avoid human mistakes.
+
+Basically, the script copies the text to be pasted in HipChat, to Clipboard and open the next screen to capture. Also, to speed the process, I let my Chrome window in the same size of the chart to get a full capture that is faster than mark the area to capture.
+
+After few days doing this way, I can confirm that is faster. I added time start and time conclusion to script and my record is 1 minute and 27 seconds. Much faster that when I started ding manually. 
+
+To run is very simple. You just need to open terminal and run:
+
+ ./hscr.sh <HOUR> <DATE>
+
+E.g. ./hscr.sh 2:00PM 08/22/17
+
+Let me know if you have questions or want to know more about the script. I will be happy to explain.
+
+I’m sharing here in case anyone needs to do one day.   
+

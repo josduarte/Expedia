@@ -1,0 +1,32 @@
+View IPs
+--------
+
+View IPs is a simple script to get the the result for 5 ip addresses in Splunk at same time.
+
+This is how the querie is executed by script:
+
+start Chrome "https://splunkewe.idx.expedmz.com/en-US/app/iota/SpotABot?form.IP=%1&form.UserAgent=*&form.guid=*&form.time_set.earliest=-1mon@mon&form.time_set.latest=@mon&form.bucket=1d&form.ville=*&earliest=0&latest="
+
+The script should run in the Jump Box, using command prompt. To transfer the BAT files there you will need to use the instructions in https://confluence/display/SPS/File+Transfers+and+Shared+Access. Basically, create a folder under //che-filidx.idx.expedmz.com/NonPCITransfer/FromCorp/Public and copy the files there. After that, in JumpBox you can get the files from \\chidxcorpfil.idxcorp.expedmz.com\PCITransfer\ToProd\Public. This service is not reliable. So here it goes another possibility:
+
+1) Edit the vip.bat with a text editor
+2) Copy all content to clipboard.
+3) In JumpBox, in command prompt, execute notepad vip.bat
+4) Paste all content from clipboard
+5) Close and save file
+6) Repeat the steps with view_ips.bat
+
+Copy the files to your user folder and using command prompt run from there:
+
+view_ips <event 1> <event 2> ... <event 5>
+
+E.g.
+
+c:\users\josduarte> view_ips 107.77.245.4 107.77.249.8 107.77.249.7 107.77.253.1 107.77.165.8
+
+The command above will start 5 tabs in Chrome each one getting the numbers for each IP.
+
+  
+
+
+
